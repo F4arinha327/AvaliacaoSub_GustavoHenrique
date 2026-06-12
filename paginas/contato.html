@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="shortcut icon" href="../midias/FaviconAlertaUrbano.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/layout.css">
+    <link rel="stylesheet" href="../estilos/contato.css">
+    
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="../midias/AlertaUrbano.png" alt="Alerta Urbano Logo" title="Alerta Urbano" class="logo">
+        </figure>
+        <h1>Alerta Urbano</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Página Inicial</a></li>
+            <li><a href="../paginas/sobre.html">Sobre</a></li>
+            <li><a href="../paginas/contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="formulario">
+            <fieldset>
+                <h1>CONTATE-NOS</h1>
+                <p>Preencha o formulário abaixo e entraremos em contato.</p>
+    
+                <label for="lbNome">Nome*:</label>
+                <input type="text" name="ipNome" id="ipNome" required>
+    
+                <label for="lbEmail">Email*:</label>
+                <input type="email" name="ipEmail" id="ipEmail" required>
+    
+                <label for="lbTelefone">Telefone:</label>
+                <input type="tel" name="ipTelefone" id="ipTelefone">
+    
+                <label for="lbEndereco">Endereço:</label>
+                <input type="text" name="ipEndereço" id="ipEndereco">
+    
+                <label for="lbDtNascimento">Data de Nascimento:</label>
+                <input type="date" name="ipDtNascimento" id="ipDtNascimento">
+    
+                <label for="lbConheceu">Onde nos conheceu?</label>
+                <select name="slConheceu" id="slConheceu">
+                    <option value="amigos">Amigos</option>
+                    <option value="parentes">Parentes</option>
+                    <option value="anuncios">Anuncios</option>
+                    <option value="outro">Outro</option>
+                </select>
+    
+                <label for="lbMensagem">Mensagem:</label>
+                <textarea name="taMensagem" id="taMensagem" rows="4"></textarea>
+    
+                <input type="checkbox" name="ipDesejaMensagem" id="ipDesejaMensagem">
+                <label for="ipDesejaMensagem">Deseja receber novidades?</label>
+    
+                <button onclick="exibeDados(event)">Exibir Dados</button>
+            </fieldset>
+        </form>
+        <h2 id="resposta" class="retorno"></h2>
+        <br>
+        <p id="pNome" class="retorno"></p>
+        <p id="pEmail" class="retorno"></p>
+        <p id="pTelefone" class="retorno"></p>
+        <p id="pData" class="retorno"></p>
+        <p id="pConheceu" class="retorno"></p>
+        <p id="pMensagem" class="retorno"></p>
+        <button onclick="EnviarForm()">CONFIRMAR</button>
+    </main>
+    <footer> Desenvolvido por <cite>Gustavo Henrique</cite> &copy; </footer>
+    <script src="../script/codigos.js"></script>
+</body>
+</html>
